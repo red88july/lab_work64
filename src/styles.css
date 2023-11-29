@@ -1,0 +1,51 @@
+.container {
+  max-width: 1440px;
+  padding: 0 10px;
+}
+
+.sizing {
+  margin: 180px auto 150px 50px;
+}
+
+.pic-style {
+  background-image: url("../src/uploads/mainPic.jpg");
+ background-size: cover;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.links:hover {
+  text-decoration: underline;
+}
+
+.facebook {
+  padding: 20px;
+  background-image: url("../src/images/ic-facebook.png");
+  background-position: left -5px top -5px;
+  background-repeat: no-repeat;
+}
+
+.twitter {
+  padding: 20px;
+  background-image: url("../src/images/ic-twitter.png");
+  background-position: left -5px top -5px;
+  background-repeat: no-repeat;
+}
+
+.linkedin {
+  padding: 20px;
+  background-image: url("../src/images/ic-linkedin.png");
+  background-position: left -5px top -5px;
+  background-repeat: no-repeat;
+}
+
+.style-footer-link {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.list-style {
+  list-style: none;
+}
