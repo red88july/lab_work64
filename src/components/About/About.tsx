@@ -69,7 +69,7 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className="pt-3 pb-3 mt-5 gap-3 bg-secondary-subtle">
-        <div className="d-flex flex-wrap justify-content-between container">
+        <div className="d-flex flex-wrap justify-content-between pt-4 pb-5 container">
           <ul className="list-style">
             <li><strong>Whats's new</strong></li>
             <li><a href="#" className="links text-secondary style-footer-link">Surface Laptop Studio 2</a></li>
