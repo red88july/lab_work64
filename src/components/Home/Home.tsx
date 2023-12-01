@@ -1,8 +1,10 @@
 import '../../styles.css';
 import axiosApi from '../../axiosApi.ts';
 import {useState, useEffect} from 'react';
+import {NavLink} from "react-router-dom";
 
 interface Post {
+    id: string,
     date: string;
     title: string;
 }
@@ -18,13 +20,17 @@ const Home = () => {
     const fetchData = async () => {
         try {
             const postsObject = await getPosts();
-            const postsArray = Object.keys(postsObject).map(key => ({
-                id: key,
-                date: postsObject[key].posts.date,
-                title: postsObject[key].posts.title,
-            }));
+            if (postsObject && typeof postsObject === 'object') {
+                const postsArray = Object.keys(postsObject).map(key => ({
+                    id: key,
+                    date: postsObject[key].posts.date,
+                    title: postsObject[key].posts.title,
+                }));
 
-            setPostList(postsArray);
+                setPostList(postsArray);
+            } else {
+                console.error('Invalid response format:', postsObject);
+            }
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -43,7 +49,7 @@ const Home = () => {
                             <b><i>Created on: </i></b>{post.date}
                         </span>
                         <h4 className="mb-3">{post.title}</h4>
-                        <button className="btn-read w-25 btn btn-success text-start ps-3">Read more</button>
+                        <NavLink to={`/posts/${post.id}`} className="btn-read w-25 btn btn-success text-start ps-3">Read more</NavLink>
                     </div>
                 </div>
             ))}

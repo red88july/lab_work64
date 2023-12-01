@@ -4,6 +4,7 @@ import AddPage from './containers/AddPage/AddPage.tsx';
 import AboutPage from './containers/AboutPage/AboutPage.tsx';
 import ContactsPage from './containers/ContactsPage/ContactsPage.tsx';
 import PageNoFoundPicture from '../src/images/404PageNotFound.jpg';
+import Post from './components/Post/Post';
 import {Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           }/>
           <Route path="/posts" element={
             <HomePage />
+          }/>
+          <Route path="/posts/:postId" element={
+           <Post />
           }/>
           <Route path="/add" element={
             <AddPage />
