@@ -1,7 +1,10 @@
-import React from 'react';
 import '../../styles.css';
 
-const Home:React.FC= () => {
+
+const Home= () => {
+
+
+
   return (
     <div className="d-flex justify-content-center align-items-center mt-5">
       <div className="d-flex flex-column border border-3 border-success rounded-2 p-3 post-size">
