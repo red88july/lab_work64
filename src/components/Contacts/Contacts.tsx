@@ -14,7 +14,7 @@ const Contacts: React.FC = () => {
         </div>
       </div>
       <div className="container mt-5">
-        <h2>Select the product you need help with</h2>
+        <h4>Select the product you need help with</h4>
         <p>We'll show you self-help options first. Additional help is available if you need it, including live chat with
           a Microsoft specialist.</p>
         <div className="d-flex mt-5 gap-3 flex-wrap">

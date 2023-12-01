@@ -5,7 +5,6 @@ import AboutPage from './containers/AboutPage/AboutPage.tsx';
 import ContactsPage from './containers/ContactsPage/ContactsPage.tsx';
 import PageNoFoundPicture from '../src/images/404PageNotFound.jpg';
 import {Route, Routes} from 'react-router-dom';
-import PortfolioPage from './containers/PortfolioPage/PortfolioPage.tsx';
 
 function App() {
   return (
@@ -29,9 +28,6 @@ function App() {
           }/>
           <Route path="/contacts" element={
             <ContactsPage />
-          }/>
-          <Route path="/contacts" element={
-            <PortfolioPage />
           }/>
           <Route path="*" element={
             <div className="container-fluid pic-container text-center mt-5">
