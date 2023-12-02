@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import {NavLink, useParams} from 'react-router-dom';
 import { useState, useEffect } from "react";
 import axiosApi from '../../axiosApi.ts';
 
@@ -30,6 +30,10 @@ const Post = () => {
                 </span>
                 <h4 className="mb-3">{post.title}</h4>
                 <p>{post.message}</p>
+              <div className="d-flex justify-content-end gap-3">
+                <NavLink to={`/posts/${post.id}`} className="w-25 btn btn-danger text-center ps-3">Delete</NavLink>
+                <NavLink to={`/posts/${post.id}`} className="w-25 btn btn-primary text-center ps-3">Edit</NavLink>
+              </div>
             </div>
         </div>
     );
