@@ -20,7 +20,7 @@ const Post = () => {
             }
         };
         fetchPost();
-    }, [postId]);
+    }, []);
 
     return (
         <div className="d-flex justify-content-center align-items-center mt-5">

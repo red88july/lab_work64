@@ -3,8 +3,8 @@ import HomePage from './containers/HomePage/HomePage.tsx';
 import AddPage from './containers/AddPage/AddPage.tsx';
 import AboutPage from './containers/AboutPage/AboutPage.tsx';
 import ContactsPage from './containers/ContactsPage/ContactsPage.tsx';
+import PostPage from './containers/PostPage/PostPage.tsx';
 import PageNoFoundPicture from '../src/images/404PageNotFound.jpg';
-import Post from './components/Post/Post';
 import {Route, Routes} from 'react-router-dom';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
             <HomePage />
           }/>
           <Route path="/posts/:postId" element={
-           <Post />
+           <PostPage />
           }/>
           <Route path="/add" element={
             <AddPage />
